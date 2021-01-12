@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calc.css" />
+</head>
+<body>
+    <h1>Basic Calculator</h1>
+    <br />
+
+    <script>
+    function onClick (event) {
+        if (event == '=') {
+            console.log('2')
+            calc.display.value = eval(calc.display.value)
+        }
+        else if (event == 'C') {
+            console.log('0')
+            calc.display.value = ''
+        }
+        else {
+            console.log('1')
+            calc.display.value += event
+        }
+    }
+    </script>
+
+    <form id="myform" name="calc">
+        <input name="display" id="display">
+        <div class="first-row">
+            <input type="button" value="7" onclick=onClick(value) />
+            <input type="button" value="8" onclick=onClick(value) />
+            <input type="button" value="9" onclick=onClick(value) />
+            <input type="button" value="/" style="background-color: green;" onclick=onClick(value) />
+        </div>
+        <div class="second-row">
+            <input type="button" value="4" onclick=onClick(value) />
+            <input type="button" value="5" onclick=onClick(value) />
+            <input type="button" value="6" onclick=onClick(value) />
+            <input type="button" value="*" style="background-color: #7db1b2;" onclick=onClick(value) />
+        </div>
+        <div class="third-row">
+            <input type="button" value="1" onclick=onClick(value) />
+            <input type="button" value="2" onclick=onClick(value) />
+            <input type="button" value="3" onclick=onClick(value) />
+            <input type="button" value="-" style="background-color: #ba55d3;"onclick=onClick(value) />
+        </div>
+        <div class="fourth-row">
+            <input type="button" value="0" onclick=onClick(value) />
+            <input type="button" value="C" onclick=onClick(value) />
+            <input type="button" value="=" style="background-color: #cc0000;" onclick=onClick(value) />
+            <input type="button" value="+" style="background-color: #cc5c11;" onclick=onClick(value) />
+        </div>
+    </form>
+</body>
+</html>
